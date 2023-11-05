@@ -1,12 +1,3 @@
-
-
-## Apoie este projeto
-
-Se você quiser apoiar esse projeto, deixe sua ⭐.
-
-Esse projeto foi criado 💚 por [Torga].
-
-
 # cypress-basico-v2
 
 Projeto simples para o curso Talking About Testing.
