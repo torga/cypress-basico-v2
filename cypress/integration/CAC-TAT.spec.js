@@ -12,6 +12,7 @@ describe('Acesso ao site de teste', () => {
     beforeEach(() => {
         cy.visit('src/index.html')
     })
+    
 
 
     // aula 1
@@ -19,6 +20,7 @@ describe('Acesso ao site de teste', () => {
         cy.title()
             .should('be.equal', 'Central de Atendimento ao Cliente TAT')
     })
+
 
     // aula 2
     it('Enviar formuário preenchido com sucesso', () => {
@@ -194,6 +196,7 @@ describe('Acesso ao site de teste', () => {
         cy.contains('Talking')
           .should('be.visible')
     })
+    //aula 08
 })
 
 
