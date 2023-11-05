@@ -12,16 +12,7 @@ describe('Acesso ao site de teste', () => {
     beforeEach(() => {
         cy.visit('src/index.html')
     })
-    afterEach(() => {
-        cy.get('#firstName')
-            .clear()
-        cy.get('#email')
-            .clear()
-        cy.get('#lastName')
-            .clear()
-        cy.get('#phone')
-            .clear()
-    })
+
 
     // aula 1
     it('Verificar o título da aplicação se é igual ao Central de Atendimento', () => {
@@ -189,6 +180,19 @@ describe('Acesso ao site de teste', () => {
             .should($input => {
                 expect($input[0].files[0].name).to.equal('example.json')
             })
+    })
+
+    //aula 07
+    it('verifica que a politica de privacidade abre em outra aba',() =>{
+        cy.get('#privacy a')
+          .should('have.attr','target','_blank')
+    })
+    it('verifica que a politica de privacidade abre em outra aba',() =>{
+        cy.get('#privacy a')
+          .invoke('removeAttr','target')
+          .click()
+        cy.contains('Talking')
+          .should('be.visible')
     })
 })
 
