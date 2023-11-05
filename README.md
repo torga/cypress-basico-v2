@@ -1,29 +1,28 @@
-# Testes automatizados com Cypress - Básico
+# cypress-basico-v2
 
-👋 Seja bem-vindo(a)!
+Projeto simples para o curso Talking About Testing.
 
-É muito bom tê-lo(a) aqui. Tenho certeza que você vai adorar este curso. ❤️
+## Pré-requisitos
 
-## O que você vai aprender
+**Git** (estou usando a versão 2.15.0)
+**Node.js** (estou usando a versão v18.16.0)
+**NPM** (estou usando a versão v9.5.1)
+**Google Chrome** (estou usando a versão 118.0.5993.117 (Versão oficial) (x86_64) )
+**Visual Studio Code** (estou usando a versão 1.83.1)
 
-Durante o curso de testes automatizados com Cypress (básico), você vai aprender:
+## Instalação
 
-- Como configurar um projeto Cypress do zero
-- Como visitar páginas locais e remotas
-- Como lidar com os elementos mais comuns encontrados em aplicações web
-- Como testar _upload_ de arquivos
-- Como realizar as mais diversas verificações de resultados esperados
-- Como criar comandos customizados
-- Como lidar com links que abrem em outra aba do navegador
-- Como rodar testes simulando as dimensões de um dispositivo móvel
-- Como resolver os mesmos problemas de diferentes formas, conhecendo a [API do Cypress](https://docs.cypress.io/api/table-of-contents)
-- Como executar os testes em um _pipeline_ de integração contínua sempre que mudanças ocorrerem no código da aplicação (ou dos testes)
-- Como criar uma documentação mínima para seu projeto de testes automatizados
+Rode o comando **npm install** para instalar as dependências do projeto
 
-## Vamos começar?
+## Testes
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+Rode **npm cypress open** no terminal do VsCode para rodar os testes em modo iterativo om viewport desktop
+Rode **npm cypress run** no terminal do VsCode para rodar os testes em modo headless com viewport desktop
+Rode **npm cypress open --config viewportWidth=410 viewportHeight=860** no terminal do VsCode para rodar os testes em modo iterativo com viewport mobile
+Rode **npm cypress run --config viewportWidth=410 viewportHeight=860** o terminal do VsCode para rodar os testes em modo headless com viewport mobile
 
-___
+## Apoie este projeto
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+Se você quiser apoiar esse projeto, deixe sua ⭐.
+
+Esse projeto foi criado 💚 por [Torga].
