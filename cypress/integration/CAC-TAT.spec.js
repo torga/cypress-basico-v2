@@ -16,11 +16,12 @@ describe('Acesso ao site de teste', () => {
 
 
     // aula 1
-    it('Verificar o título da aplicação se é igual ao Central de Atendimento', () => {
-        cy.title()
-            .should('be.equal', 'Central de Atendimento ao Cliente TAT')
+    Cypress._.times(5,()=>{
+        it('Verificar o título da aplicação se é igual ao Central de Atendimento', () => {
+            cy.title()
+                .should('be.equal', 'Central de Atendimento ao Cliente TAT')
+        })
     })
-
 
     // aula 2
     it('Enviar formuário preenchido com sucesso', () => {
@@ -50,7 +51,7 @@ describe('Acesso ao site de teste', () => {
     })
     // aula 2 e 3
     it('Enviar formuário preenchido com sucesso com menos delay', () => {
-        const BIG_TEXTO = 'pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai pai'
+        const BIG_TEXTO = Cypress._.repeat('pai',50)
         cy.get('#firstName')
             .type('Igor')
             .should('have.value', 'Igor')
@@ -196,7 +197,20 @@ describe('Acesso ao site de teste', () => {
         cy.contains('Talking')
           .should('be.visible')
     })
-    //aula 08
+    it('Faz uma requisicao http',() => {
+        cy.request('https://cac-tat.s3.eu-central-1.amazonaws.com/index.html')
+          .should(response => {
+            const {status, statusText, body} = response
+             expect(status).to.equal(200)
+             expect(statusText,).to.equal('OK')
+             expect(body).to.include('CAC')
+          })
+    })
+    it.only('Encontra o gato', () => {
+        cy.get('#cat')
+          .invoke('show')
+          .should('be.visible')
+    })
 })
 
 
